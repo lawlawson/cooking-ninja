@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 import './Create.css';
 
@@ -7,6 +7,21 @@ export default function Create() {
   const [method, setMethod] = useState('');
   const [cookingTime, setCookingTime] = useState('');
 
+  return (
+    <div className='create'>
+      <h2 className='page-title'>Add A New Recipe</h2>
 
-  return <div>Create</div>;
+      <form>
+        <label>
+          <span>Recipe title:</span>
+          <input
+            type='text'
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+            required
+          />
+        </label>
+      </form>
+    </div>
+  );
 }
