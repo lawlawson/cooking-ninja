@@ -7,11 +7,15 @@ export default function Create() {
   const [method, setMethod] = useState('');
   const [cookingTime, setCookingTime] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(title, method, cookingTime);
+  };
   return (
     <div className='create'>
       <h2 className='page-title'>Add A New Recipe</h2>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <span>Recipe title:</span>
           <input
@@ -21,6 +25,25 @@ export default function Create() {
             required
           />
         </label>
+        <label>
+          <span>Recipe Method:</span>
+          <textarea
+            onChange={(e) => setMethod(e.target.value)}
+            value={method}
+            required
+          />
+        </label>
+        <label>
+          <span>Cooking time (minutes):</span>
+          <input
+            type='number'
+            onChange={(e) => setCookingTime(e.target.value)}
+            value={cookingTime}
+            required
+          />
+        </label>
+
+        <button className='btn'>submit</button>
       </form>
     </div>
   );
