@@ -6,6 +6,8 @@ export default function Create() {
   const [title, setTitle] = useState('');
   const [method, setMethod] = useState('');
   const [cookingTime, setCookingTime] = useState('');
+  const [newIngredient, setNewIngredient] = useState('');
+  const [ingredients, setNewIngredients] = useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +27,15 @@ export default function Create() {
             required
           />
         </label>
+
+        <label>
+          <span>Recipe ingredients:</span>
+          <div className='ingredients'>
+            <input type='text' />
+            <button className='btn'>add</button>
+          </div>
+        </label>
+
         <label>
           <span>Recipe Method:</span>
           <textarea
