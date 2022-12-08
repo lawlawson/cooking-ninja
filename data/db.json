@@ -47,6 +47,17 @@
       "method": "blah blah blah",
       "cookingTime": "45 minutes",
       "id": "Rs10ZlB"
+    },
+    {
+      "title": "Chickpea Curry",
+      "ingredients": [
+        "Chickpeas",
+        "Onion",
+        "Curry powder"
+      ],
+      "method": "blah blah blah",
+      "cookingTime": "60 minutes",
+      "id": "4HJ-msd"
     }
   ]
 }
